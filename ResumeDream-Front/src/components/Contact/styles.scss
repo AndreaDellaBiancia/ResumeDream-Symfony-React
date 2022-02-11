@@ -1,0 +1,378 @@
+@use '../../styles/vars';
+
+.contact {
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: vars.$gutter none;
+    width: 100%;
+    &__div-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__title {
+        font-size: vars.$h1;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: vars.$gutter*5 0;
+    background-color: white;
+    &__logo {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.contact-address {
+  &__title-div, &__iframe-div {
+    display: flex;
+    justify-content: center;
+  }
+  &__title-div {
+    margin-bottom: vars.$gutter*2;
+    &__title {
+      font-size: vars.$h1;
+    }
+  }
+  &__iframe-div {
+    &__iframe {
+      width: 500px;
+      height: 250px;
+    }
+  }
+}
+
+.contact-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: vars.$gutter*3;
+  &__title-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: vars.$gutter*2;
+    &__title {
+      font-size: vars.$h1;
+    }
+  }
+  &__list-div {
+    display: flex;
+    justify-content: space-evenly;
+    &__list {
+      &__item {
+        list-style: none;
+        font-size: vars.$p;
+      }
+    }
+  }
+}
+
+.contact-li {
+  display: flex;
+  &__dot {
+    height: calc(vars.$gutter / 2);
+    width: calc(vars.$gutter / 2);
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: calc(vars.$gutter / 1.5);
+    margin-top: calc(vars.$gutter / 1.9);
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border: calc(vars.$gutter / 10) solid vars.$text-color;
+  padding: 0 vars.$gutter*2;
+  margin: vars.$gutter*5 0;
+    &__sub-title {
+      font-size: vars.$h2;
+      font-weight: bold;
+      text-align: center;
+      margin: vars.$gutter*2 auto vars.$gutter;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__prenom-nom {
+        display: flex;
+        place-items: center;
+        margin-bottom: calc(vars.$gutter / 2);
+      }
+      &__button {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: vars.$gutter;
+        margin-bottom: vars.$gutter;
+        &__submit {
+          justify-content: center;
+        }
+      }
+    }
+}
+
+.input-container {
+  &__short {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: vars.$gutter*20;
+    line-height: vars.$gutter*3;
+    margin: vars.$gutter auto;
+    &__label, &__label__writen {
+      position: absolute;
+      padding-left: vars.$gutter*2.5;
+      text-justify: initial;
+      top: -(calc(vars.$gutter / 6));
+      left: 0;
+      width: 100%;
+      color: vars.$text-color;
+      transition: 0.15s;
+    }
+    &__input, &__input__writen {
+      width: 80%;
+      border: 0;
+      padding: calc(vars.$gutter / 1.5);
+      border: calc(vars.$gutter / 20) solid vars.$text-color;
+      box-shadow: none;
+      color: vars.$main-color;
+    }
+    &__input:focus, &__input__writen {
+      border-color: vars.$main-color;
+    }
+    &__input:focus ~ &__label, &__input__writen ~ &__label__writen {
+      color: vars.$main-color;
+      font-size: calc(vars.$tiny-title / 1.1);
+      top: -(vars.$gutter*2);
+    }
+  }
+  &__long {
+    position: relative;
+    width: vars.$gutter*36;
+    line-height: vars.$gutter*3;
+    margin: vars.$gutter auto vars.$gutter*2;
+    &__label, &__label__writen {
+      position: absolute;
+      padding-left: calc(vars.$gutter / 2);
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: vars.$text-color;
+      transition: 0.15s;
+    }
+    &__input, &__input__writen {
+      width: 100%;
+      border: 0;
+      padding: calc(vars.$gutter / 1.5);
+      border: calc(vars.$gutter / 20) solid vars.$text-color;
+      box-shadow: none;
+      color: vars.$main-color;
+    }
+    &__input:focus, &__input__writen {
+      border-color: vars.$main-color;
+    }
+    &__input:focus ~ &__label, &__input__writen ~ &__label__writen {
+      color: vars.$main-color;
+      font-size: calc(vars.$tiny-title / 1.1);
+      top: -(vars.$gutter*1.8);
+    }
+  }
+  &__big {
+    position: relative;
+    width: vars.$gutter*36;
+    height: vars.$gutter*10;
+    line-height: vars.$gutter*3;
+    margin: vars.$gutter auto;
+    &__label, &__label__writen {
+      position: absolute;
+      padding-left: calc(vars.$gutter / 2);
+      top: -(calc(vars.$gutter / 4));
+      left: 0;
+      width: 100%;
+      color: vars.$text-color;
+      transition: 0.15s;
+    }
+    &__input, &__input__writen {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      padding: calc(vars.$gutter / 1.5);
+      border: calc(vars.$gutter / 20) solid vars.$text-color;
+      box-shadow: none;
+      color: vars.$main-color;
+    }
+    &__input:focus, &__input__writen {
+      border-color: vars.$main-color;
+    }
+    &__input:focus ~ &__label, &__input__writen ~ &__label__writen {
+      color: vars.$main-color;
+      font-size: calc(vars.$tiny-title / 1.1);
+      top: -(vars.$gutter*2.1);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact {
+    &__top {
+      width: 100%;
+      flex-direction: column;
+      background-color: white;
+      &__div-title {
+        padding-top: vars.$gutter*6;
+      }
+    }
+    &__bottom {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: vars.$gutter*5 0;
+      background-color: vars.$background-color;
+      &__logo {
+        display: grid;
+        place-items: center;
+      }
+    }
+  }
+
+  .contact-address {
+    justify-content: center;
+    &__title-div, &__iframe-div {
+      display: flex;
+      justify-content: center;
+    }
+    &__title-div {
+      margin: vars.$gutter*2 0;
+      &__title {
+        font-size: vars.$h1;
+      }
+    }
+    &__iframe-div {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  .contact-plan {
+    margin-top: vars.$gutter*4;
+    &__title-div {
+      display: flex;
+      justify-content: center;
+      margin-bottom: vars.$gutter*2;
+      &__title {
+        font-size: vars.$h1;
+      }
+    }
+    &__list-div {
+      display: flex;
+      justify-content: space-evenly;
+      &__list {
+        &__item {
+          list-style: none;
+          font-size: vars.$p;
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    margin-top: 0;
+    border: none;
+      &__sub-title {
+        display: none;
+      }
+      &__form {
+        &__prenom-nom {
+          flex-direction: column;
+        }
+        &__button {
+          justify-content: center;
+          margin-top: vars.$gutter*2;
+        }
+      }
+  }
+
+  .input-container {
+    &__short {
+      width: vars.$gutter*35;
+      margin: vars.$gutter*3 0 0;
+      &__label, &__label__writen {
+        padding-left: vars.$gutter*4;
+      }
+    }
+    &__long {
+      width: vars.$gutter*28;
+      margin: vars.$gutter*2 auto vars.$gutter;
+    }
+    &__big {
+      position: relative;
+      width: vars.$gutter*28;
+      margin: vars.$gutter*2 auto 0;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .input-container {
+    &__short {
+      width: vars.$gutter*25;
+      margin-top: vars.$gutter*3;
+      &__label, &__label__writen {
+        padding-left: vars.$gutter*4;
+      }
+    }
+    &__long {
+      width: vars.$gutter*20;
+      margin: vars.$gutter*2 auto vars.$gutter;
+    }
+    &__big {
+      position: relative;
+      width: vars.$gutter*20;
+      margin: vars.$gutter*2 auto 0;
+    }
+  }
+  .contact-address {
+    &__iframe-div {
+      &__iframe {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact-address {
+    &__iframe-div {
+      &__iframe {
+        width: 200px;
+      }
+    }
+  }
+  .input-container {
+    &__short {
+      width: vars.$gutter*19;
+      margin-top: vars.$gutter*3;
+      &__label, &__label__writen {
+        padding-left: vars.$gutter*4;
+      }
+    }
+    &__long {
+      width: vars.$gutter*15;
+      margin: vars.$gutter*2 auto vars.$gutter;
+    }
+    &__big {
+      position: relative;
+      width: vars.$gutter*15;
+      margin: vars.$gutter*2 auto 0;
+    }
+  }
+}

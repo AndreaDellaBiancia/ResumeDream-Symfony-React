@@ -1,0 +1,42 @@
+@use '../../styles/vars';
+
+.error {
+
+  &__content {
+    margin: 3 * vars.$gutter 0;
+    padding: 3 * vars.$gutter;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__informations {
+      width: 50%;
+
+      &__title {
+        font-size: 4rem;
+        font-weight: vars.$font-bold;
+        margin-bottom: vars.$gutter;
+        line-height: 100%;
+      }
+
+      &__text {
+        margin-bottom: 3 * vars.$gutter;
+      }
+
+      &__button {
+        padding: vars.$gutter;
+        border: none;
+        border-radius: 0.5 * vars.$gutter;
+        background-color: vars.$main-color;
+        color: #ffffff;
+        transition: all 0.5s;
+  
+        &:hover {
+          background-color: vars.$alt-color;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}

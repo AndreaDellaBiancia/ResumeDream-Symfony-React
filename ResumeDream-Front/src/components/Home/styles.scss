@@ -1,0 +1,312 @@
+@use '../../styles/vars';
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ffffff;
+
+  &__creation,
+  &__register {
+
+    &__button {
+      margin-top: 0.5 * vars.$gutter;
+      padding: 0.5 * vars.$gutter;
+      width: 100px;
+      border-radius: 0.5 * vars.$gutter;
+
+      &--stroked {
+        border: solid 1px vars.$main-color;
+        color: vars.$main-color;
+        background-color: transparent;
+        margin-right: vars.$gutter;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: vars.$main-color;
+          color: #ffffff;
+          transition: all 0.5s;
+        }
+      }
+
+      &--filled {
+        border: solid 1px vars.$main-color;
+        background-color: vars.$main-color;
+        color: #ffffff;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: vars.$alt-color;
+          border: solid 1px vars.$alt-color;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+
+  &__creation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5 * vars.$gutter;
+
+    &__title {
+      font-size: vars.$h1;
+      color: #fff;
+    }
+
+    &__logo {
+      max-width: 290px;
+      padding: 0;
+    }
+  }
+
+  &__presentation {
+    display: flex;
+    flex-wrap: wrap;
+    padding: vars.$gutter;
+
+    &__subtitle {
+      width: 100%;
+      font-size: vars.$h2;
+    }
+
+    &__part {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 50%;
+
+      &__img {
+        max-width: 100px;
+        height: 100px;
+        width: 50%;
+        padding: vars.$gutter;
+        margin: auto;
+      }
+    }
+
+    &__txt {
+
+      flex-direction: column;
+      height: fit-content;
+
+      &__tiny__title {
+        font-size: vars.$tiny-title;
+        font-weight: bold;
+        padding: vars.$gutter;
+        margin-bottom: 0;
+        height: 56px;
+      }
+
+      &__description {
+        padding: 0.5 * vars.$gutter;
+        height: 112px;
+      }
+    }
+  }
+
+  &__video {
+    display: flex;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: auto;
+    padding: 5 * vars.$gutter;
+
+
+    &__txt {
+      flex-wrap: wrap;
+      text-align: center;
+      width: 50%;
+      margin-right: 2 * vars.$gutter;
+
+      &__title {
+        font-size: vars.$tiny-title;
+        font-weight: bold;
+        text-align: left;
+        margin: 3 * vars.$gutter;
+      }
+
+      &__description {
+        text-align: left;
+        list-style: unset;
+        margin: 3 * vars.$gutter;
+      }
+    }
+
+    &__player {
+      padding: vars.$gutter;
+      width: 50%;
+
+        &__video{
+          width: 90%;
+          margin-left: vars.$gutter;
+          height: 17rem;
+      }
+    }
+  }
+
+  &__library {
+    text-align: center;
+    width: 100%;
+    padding: 3 * vars.$gutter;
+
+    &__description {
+      display: flex;
+      padding: vars.$gutter 4 * vars.$gutter;
+      flex-direction: column;
+      font-size:0.9rem;
+
+      &__title {
+        text-align: center;
+        font-size: vars.$h2;
+        margin: 2 * vars.$gutter;
+      }
+    }
+
+    &__img {
+      align-items: center;
+      padding: vars.$gutter 4 * vars.$gutter;
+      flex-direction: row;
+
+      &__model {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin: 0.3rem;
+      }
+
+    }
+  }&__register{
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 7 * vars.$gutter;
+    text-align: left;
+    background-color: #f5f5f5;
+
+    &__txt{
+      width: 50%;
+      font-size: vars.$tiny-title;
+    }
+    &__button{
+      width: auto;
+      display: flex;
+      margin-top: 0;
+      padding: 0.5 * vars.$gutter 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px)
+{
+.home{
+  &__creation {
+    padding: 2rem 0;
+
+    &__logo {
+      width: 50%;
+    }
+
+    &__title {
+      padding: vars.$gutter;
+      text-align: center;
+    }
+
+    &__button {
+      margin-bottom: vars.$gutter;
+    }
+  }
+  &__presentation {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+
+    &__part {
+      padding: 0;
+    }
+  }
+
+  &__video{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: vars.$gutter;
+
+      &__txt{
+        margin: 0;
+        width: auto;
+        text-align: center;
+
+        &__title {
+          text-align: center;
+          margin: vars.$gutter;
+        }
+
+        &__description {
+          margin: vars.$gutter;
+        }
+       }
+
+       &__player {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        &__video {
+          height: auto;
+          margin: 0;
+          width: 100%;
+        }
+       }
+    }
+    &__library{
+      margin: auto;
+      width: 100%;
+      padding: vars.$gutter;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+
+
+      &__description{
+        padding: vars.$gutter;
+        width: 100%;
+
+        &__title {
+          margin: 0 0 vars.$gutter 0;
+        }
+      }
+
+      &__img {
+        padding: vars.$gutter;
+
+
+        &__model {
+          padding: vars.$gutter;
+
+
+        }
+      }
+    }
+
+    &__register{
+      flex-wrap: wrap;
+      align-items: center;
+      padding: vars.$gutter;
+
+      &__txt{
+        margin-top: vars.$gutter;
+        width: 100%;
+      }
+
+      &__button{
+        flex-direction: column;
+        align-items: center;
+        padding: vars.$gutter;
+        width: 100%;
+      }
+    }
+  }
+}

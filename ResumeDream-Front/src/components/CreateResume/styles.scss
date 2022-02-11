@@ -1,0 +1,183 @@
+@use '../../styles/vars';
+
+.create-resume {
+  padding: 7 * vars.$gutter 2 * vars.$gutter;
+
+  &__explication {
+    padding: 2 * vars.$gutter 5 * vars.$gutter;
+    background-color: #ffffff;
+
+    &__title {
+      font-size: vars.$h1;
+      margin-bottom: 2 * vars.$gutter;
+    }
+
+    &__list {
+      list-style: inside;
+
+      &__item {
+        margin-bottom: 0.5 * vars.$gutter;
+      }
+    }
+  }
+
+  &__control {
+    margin: 3 * vars.$gutter auto;
+    display: flex;
+    flex-direction: column;
+
+    &__dropdown {
+      display: flex;
+      align-items: center;
+      margin-bottom: vars.$gutter;
+
+      &__button {
+        padding: vars.$gutter vars.$gutter*2;
+        border: none;
+        border-radius: 0.5 * vars.$gutter;
+        background-color: vars.$main-color;
+        color: #ffffff;
+        transition: all 0.5s;
+      }
+
+      &__button:hover {
+        background-color: vars.$alt-color;
+        transition: all 0.5s;
+      }
+      &__content {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 84%;
+        left: 20px;
+        position: relative;
+        &__hidden {
+          display: none;
+        }
+      }
+    }
+
+    &__resume-title {
+      padding: vars.$gutter;
+      min-width: 300px;
+    }
+
+    &__buttons {
+
+      &__item {
+        padding: vars.$gutter;
+        border: none;
+        border-radius: 0.5 * vars.$gutter;
+        background-color: vars.$main-color;
+        color: #ffffff;
+        transition: all 0.5s;
+        width: 150px;
+
+        &__content{
+          display: none;
+
+          &__element{
+            cursor: pointer;
+            padding: 0 vars.$gutter;
+            transition: color 0.5s;
+
+            &:hover{
+              color: vars.$alt-color;
+              transition: color 0.5s;
+            }
+          }
+
+          &--open{
+            display: flex;
+            justify-content: space-around;
+            margin-left: vars.$gutter;
+          }
+        }
+
+        &:hover {
+          background-color: vars.$alt-color;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+
+  &__generator {
+    display: flex;
+
+    &__datas-list {
+      width: 40%;
+
+      &__data {
+        border-radius: 0.5 * vars.$gutter;
+        border: solid 1px vars.$main-color;
+        margin-right: vars.$gutter;
+        margin-bottom: vars.$gutter;
+
+          &__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: vars.$main-color;
+            padding: vars.$gutter;
+
+            &__title {
+              font-size: vars.$h2;
+            }
+
+            &__icon {
+              font-size: 4rem;
+              cursor: pointer;
+              transition: all 0.7s;
+            }
+
+            &__icon--open {
+              transform: rotateZ(45deg);
+              transition: all 0.7s;
+            }
+          }
+
+        &__form {
+          padding: 0 vars.$gutter;
+          text-align: center;
+          height: auto;
+          opacity: 1;
+          transition: all 0.4s;
+
+          &--hide {
+            overflow: hidden;  /* Hide the element content, while height = 0 */
+            height: 0;
+            opacity: 0;
+            transition: all 0.4s;
+          }
+
+          &__item {
+            border-top: solid 1px vars.$main-color;
+            padding: vars.$gutter;
+            text-align: left;
+          }
+
+          &__button {
+            padding: vars.$gutter;
+            margin-left: vars.$gutter;
+            margin: vars.$gutter;
+            border: none;
+            border-radius: 0.5 * vars.$gutter;
+            background-color: vars.$main-color;
+            color: #ffffff;
+            transition: all 0.5s;
+
+            &:hover {
+              background-color: vars.$alt-color;
+              transition: all 0.5s;
+            }
+          }
+        }
+      }
+    }
+
+    &__model {
+      width: 100%;
+    }
+  }
+}

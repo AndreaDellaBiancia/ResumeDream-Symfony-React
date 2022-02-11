@@ -1,0 +1,21 @@
+{% extends 'back/base.html.twig' %}
+
+{% block body %}
+
+	<h1>Create new User</h1>
+
+	{% if errors is defined %}
+		<div class="form-errors" style=" width: 100%; background-color: #EBB2B2; color: red; padding: 5px; border-radius: 3px; border: 1px solid red; ">
+			{% for error in errors %}
+				<span>{{ error.message }}</span>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+
+	{{ include('back/user/_form.html.twig') }}
+
+
+	<a href="{{ path('user_browse') }}">back to list</a>
+
+{% endblock %}

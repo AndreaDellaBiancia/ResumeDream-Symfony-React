@@ -1,0 +1,81 @@
+@use '../../styles/vars';
+
+.userDatasList {
+  padding-top: 5.5rem;
+  display: flex;
+
+  &__page {
+    width: 100%;
+    display: flex;
+
+    &__sidebar {
+      width: 25%;
+    }
+
+    &__informations {
+      width: 75%;
+
+    }
+
+    &__list {
+      width: 100%;
+      ;
+    }
+
+  }
+}
+
+.template {
+
+  &__page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.DataListInformations {
+
+  padding: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-align: left;
+    //color: white;
+
+    &__text {
+      background-color: #18A0FB;
+      border-radius: 15%;
+      font-size: vars.$h1;
+      font-weight: vars.$font-bold;
+    }
+  }
+
+  &__informations {
+
+
+    &__button {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+
+      &__edit,
+      &__trash {
+        color: #18A0FB;
+        border-color: rgba(128, 128, 128, 0.5);
+        font-size: 1.5rem;
+        padding-top: 0.1rem;
+        margin: 0.2rem;
+      }
+    }
+
+
+    &__title {
+      font-weight: vars.$font-bold;
+    }
+
+  }
+}

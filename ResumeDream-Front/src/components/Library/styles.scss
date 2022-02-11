@@ -1,0 +1,40 @@
+@use '../../styles/vars';
+
+.library {
+
+  &__page {
+    display: flex;
+    justify-content: flex-end;
+
+    &__sidebar {
+      position: fixed;
+      left: 0;
+      width:25%;
+      flex-wrap: wrap;
+
+      &__item {
+        padding: calc(vars.$gutter/2) vars.$gutter;
+        color: vars.$main-color;
+        cursor: pointer;
+      }
+    }
+
+    &__templates {
+      flex-wrap: wrap;
+      padding: 1rem;
+      width:75%;
+    }
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .library {
+    &__page__cv {
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{% extends "back/base.html.twig" %}
+
+{% block body %}
+    <h1>Modifer un User</h1>
+
+    {{ include('back/user/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('user_browse') }}">back to list</a>
+    
+{% endblock %}

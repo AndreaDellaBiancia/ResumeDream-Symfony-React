@@ -1,0 +1,349 @@
+@use '../../styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@600;700&display=swap');
+
+//style sheet for dionysos template
+.template__page {
+  display: flex;
+  min-height: 70rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.template__page__cv {
+  width: 49.6rem;
+  height: 70rem;
+  flex-wrap: wrap;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  font-size: vars.$p;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-sizing: initial;
+  padding-bottom: 2rem;
+  color: vars.$text-color;
+  background-color: white;
+  //personal data style rules
+  &__personalDatas {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    //name size and position
+    &__firstName, &__lastName {
+      color: vars.$text-color;
+      width: 67%;
+      padding-left: 40px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: calc(vars.$h1 * 2.5);
+      z-index: 2;
+      background-color: rgba(237, 255, 0, 0.6);
+      text-transform: uppercase;
+      left: 170px;
+    }
+    &__firstName {
+      position: absolute;
+      top: 69px;
+      padding-top: 70px;
+      padding-bottom: 26px;
+    }
+    &__lastName {
+      position: absolute;
+      top: 165px;
+      padding-bottom: 70px;
+      padding-top: 26px;
+    }
+    // picture size and position
+    &__picture {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+      &__info {
+        height: 310px;
+        width: 220px;
+        object-fit: cover;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+    }
+    // about me position and size
+    &__title, &__content {
+      display: none;
+      justify-content: flex-end;
+      position: absolute;
+      width: 25%;
+      left: 45px;
+      text-align: right;
+      padding-right: 30px;
+      top: 400px;
+    }
+    &__title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    &__content {
+      padding-top: 40px;
+    }
+    // contact information position
+    &__contact {
+      position: absolute;
+      top: 370px;
+      left: 45px;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      width: 25%;
+      padding-top: 30px;
+      &__linkedin {
+        position: absolute;
+        left: 130px;
+        display: none;
+      }
+    }
+  }
+  &__experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    width: 55%;
+    left: 310px;
+    text-align: left;
+    top: 360px;
+    &__title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      border-top: 12px solid rgb(237, 255, 0);
+      width: 10%;
+      &__category {
+        position: relative;
+        bottom: 10px;
+      }
+    }
+    &__header {
+      padding-bottom: vars.$gutter;
+      &__role {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &__city {
+        float: left;
+        margin-right: 3.2px;
+        font-style: italic;
+      }
+      &__date {
+        overflow: auto;
+        clear: right;
+        display: flex;
+        font-style: italic;
+        text-transform: capitalize;
+        &__end {
+          margin-left: calc(vars.$gutter / 4);
+        }
+      }
+      &__content {
+        overflow-wrap: break-word;
+        &__info {
+          list-style-position: inside;
+          display:list-item;
+        }
+        &__info:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &__educations {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    width: 55%;
+    left: 310px;
+    text-align: left;
+    top: 690px;
+    &__title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      border-top: 12px solid rgb(237, 255, 0);
+      width: 10%;
+      &__category {
+        position: relative;
+        bottom: 10px;
+      }
+    }
+    &__education {
+      padding-bottom: vars.$gutter;
+      &__certificate {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &__city {
+        float: left;
+        margin-right: 3.2px;
+        opacity: 0.8;
+      }
+      &__school-name {
+        font-style: italic;
+      }
+      &__date {
+        overflow: auto;
+        clear: right;
+        display: flex;
+        opacity: 0.8;
+        text-transform: capitalize;
+        &__end {
+          margin-left: calc(vars.$gutter / 4);
+        }
+      }
+      &__content {
+        overflow-wrap: break-word;
+        &__info {
+          list-style-position: inside;
+          display:list-item;
+        }
+        &__info:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &__skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    width: 25%;
+    left: 45px;
+    text-align: right;
+    padding-right: 30px;
+    top: 360px;
+    padding-top: 190px;
+    &__title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+    }
+    &__skill {
+      &__title {
+        display: none;
+      }
+      &__content {
+        display:list-item;
+      }
+    }
+  }
+  &__language {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    width: 25%;
+    left: 45px;
+    text-align: right;
+    padding-right: 30px;
+    top: 360px;
+    padding-top: 620px;
+    border-right: 4px solid rgb(237, 255, 0);
+    &__title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      &__header {
+        display: flex;
+        justify-content: flex-end;
+        text-transform: capitalize;
+        &__name {
+          &__info {
+            font-weight: 600;
+          }
+        }
+        &__level {
+          padding-left: calc(vars.$gutter / 4);
+        }
+      }
+    }
+  }
+  &__activity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    width: 25%;
+    left: 45px;
+    text-align: right;
+    padding-right: 30px;
+    top: 360px;
+    padding-top: 380px;
+    &__title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+    }
+    &__header {
+    padding-bottom: vars.$gutter;
+      &__title {
+        text-transform: uppercase;
+        font-style: italic;
+      }
+      &__date {
+        overflow: auto;
+        display: flex;
+        justify-content: flex-end;
+        text-transform: capitalize;
+        &__end {
+          margin-left: calc(vars.$gutter / 4);
+        }
+      }
+      &__content {
+        display: none;
+        overflow-wrap: break-word;
+        &__info {
+          list-style-position: inside;
+          display:list-item;
+        }
+        &__info:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &__socialNetwork {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    width: 25%;
+    left: 45px;
+    text-align: right;
+    padding-right: 30px;
+    top: 360px;
+    &__category {
+      font-family: 'Oswald', sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+    }
+  }
+}

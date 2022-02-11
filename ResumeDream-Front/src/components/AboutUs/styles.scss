@@ -1,0 +1,94 @@
+@use '../../styles/vars';
+
+.team-list {
+  display: block;
+  justify-content: center;
+  text-align: center;
+
+  &__title {
+    font-size: vars.$h1;
+    margin-top: vars.$gutter*2;
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: center;
+    margin: vars.$gutter*3;
+  }
+}
+
+.profile-card {
+  margin: auto vars.$gutter;
+
+  &__avatar {
+    height: vars.$gutter*12;
+    width: vars.$gutter*12;
+  }
+
+  &__name {
+    font-size: vars.$h2;
+    margin: calc(vars.$gutter / 2) auto;
+  }
+
+  &__role {
+    font-size: vars.$p;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+
+      &__item {
+        margin: calc(vars.$gutter / 2) calc(vars.$gutter / 3);
+      }
+  }
+}
+
+.who-are-we {
+
+  background-color: white;
+  padding: vars.$gutter*6 vars.$gutter*10;
+
+  &__title {
+    font-size: vars.$h1;
+    margin-bottom: vars.$gutter;
+  }
+
+  &__info {
+    font-size: vars.$p;
+  }
+}
+
+@media screen and (max-width: 767px){
+
+.about-us{
+  margin:4rem;
+}
+.team-list{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title{
+      width: 100%;
+      padding: vars.$gutter;
+    }
+
+    &__profile{
+      flex-direction: column;
+      margin: vars.$gutter;
+
+
+    }
+  }
+
+.profile-card {
+  width: 100%;
+  margin: vars.$gutter;
+}
+
+.who-are-we {
+  width: 100%;
+  padding: vars.$gutter;
+  text-align: center;
+}
+}

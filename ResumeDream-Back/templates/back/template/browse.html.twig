@@ -1,0 +1,38 @@
+{% extends 'back/base.html.twig' %}
+
+{% block title %}Template{% endblock %}
+
+{% block body %}
+    <h1>Liste des templates</h1>
+
+    <table class="table">
+    <a href="{{ path('template_add') }}">Create new</a>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Style Url</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for template in templates %}
+            <tr>
+                <td>{{ template.id }}</td>
+                <td>{{ template.name }}</td>
+                <td>{{ template.styleUrl }}</td>
+                <td>
+                    <a href="{{ path('template_read', {'id': template.id}) }}">show</a>
+                    <a href="{{ path('template_edit', {'id': template.id}) }}">edit</a>
+                    <a href="{{ path('template_delete', {'id': template.id}) }}">delete</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'back/base.html.twig' %}
+
+{% block title %}New Template{% endblock %}
+
+{% block body %}
+    <h1>Modifier un Template</h1>
+
+    {{ include('back/template/_form.html.twig', {"button_label": "UPDATE"}) }}
+    
+
+    <a href="{{ path('template_browse') }}">back to list</a>
+{% endblock %}

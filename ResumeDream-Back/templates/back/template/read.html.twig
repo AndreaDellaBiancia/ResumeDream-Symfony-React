@@ -1,0 +1,39 @@
+{% extends 'back/base.html.twig' %}
+
+{% block title %}Template{% endblock %}
+
+{% block body %}
+    <h1>Template</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ template.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ template.name }}</td>
+            </tr>
+            <tr>
+                <th>Style Url</th>
+                <td>{{ template.styleUrl }}</td>
+            </tr>
+            <tr>
+                <th>Crée le </th>
+                <td>{{ template.createdAt ? template.createdAt|date('d-m-Y H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Mis à jour le</th>
+                <td>{{ template.updatedAt ? template.updatedAt|date('d-m-Y H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('template_edit', {'id': template.id}) }}">edit</a>
+    <a href="{{ path('template_browse') }}">back to list</a>
+
+
+
+
+{% endblock %}

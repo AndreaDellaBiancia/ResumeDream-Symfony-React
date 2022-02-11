@@ -1,0 +1,334 @@
+@use '../../styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+//style sheet for dionysos template
+.template__page {
+  display: flex;
+  min-height: 70rem;
+  justify-content: center;
+  padding: 6rem;
+}
+
+.template__page__cv {
+  width: 49rem;
+  height: 70rem;
+  flex-wrap: wrap;
+  position: relative;
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-sizing: initial;
+  padding-bottom: 2rem;
+  color: white;
+  background-color: #e647b6c7;
+  //personal data style rules
+  &__personalDatas {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    //name size and position
+    &__firstName, &__lastName {
+      color: vars.$text-color;
+      font-family: 'Gwendolyn', sans-serif;
+      color: rgb(209, 49, 129);
+      font-weight: 700;
+      font-size: calc(vars.$h1 * 2.5);
+      background-color: white;
+    }
+    &__firstName {
+      width: 30%;
+      position: absolute;
+      padding-top: 330px;
+      padding-bottom: 800.5px;
+      padding-left: 60px;
+    }
+    &__lastName {
+      width: 30%;
+      position: absolute;
+      top: 380px;
+      padding-top: 10px;
+      padding-left: 60px;
+    }
+    // picture size and position
+    &__picture {
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      padding-top: 50px;
+      left: 10px;
+
+
+      &__info {
+        height: 220px;
+        width: 220px;
+        object-fit: cover;
+      }
+    }
+    &__title, &__content {
+      display: flex;
+      position: absolute;
+      width: 25%;
+      left: 330px;
+    }
+    &__title {
+      top: 100px;
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+      color: rgb(230, 5, 155);
+    }
+    &__content {
+      font-style: italic;
+      top: 140px;
+    }
+    // contact information position
+    &__contact {
+      position: absolute;
+      top: 450px;
+      left: 60px;
+      color: vars.$text-color;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column-reverse;
+      width: 25%;
+      border-top: 2px solid #99005e;
+      padding-top: 30px;
+      font-style: italic;
+    }
+  }
+  &__experience {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 330px;
+    top: 320px;
+    width: 53%;
+    padding-top: 15px;
+    border-top: 2px solid #99005e;
+    &__title {
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      padding-bottom: vars.$gutter;
+      color: rgb(230, 5, 155);
+    }
+    &__header {
+      padding-bottom: vars.$gutter;
+      &__role {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: rgb(80, 79, 79);
+      }
+      &__city {
+        float: left;
+        margin-right: 3.2px;
+        opacity: 0.8;
+      }
+      &__date {
+        overflow: auto;
+        clear: right;
+        display: flex;
+        opacity: 0.8;
+        text-transform: capitalize;
+        &__end {
+          margin-left: calc(vars.$gutter / 4);
+        }
+      }
+      &__content {
+        overflow-wrap: break-word;
+        &__info {
+          list-style-position: inside;
+          display:list-item;
+
+        }
+        &__info:first-letter {
+          text-transform: uppercase;
+
+        }
+      }
+    }
+  }
+  &__educations {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 330px;
+    top: 650px;
+    width: 53%;
+    padding-top: 15px;
+    border-top: 2px solid #99005e;
+    &__title {
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      padding-bottom: vars.$gutter;
+      color: rgb(230, 5, 155);
+    }
+    &__education {
+      padding-bottom: vars.$gutter;
+      &__certificate {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: rgb(80, 79, 79);
+      }
+      &__city {
+        float: left;
+        margin-right: 3.2px;
+        opacity: 0.8;
+      }
+      &__school-name {
+        font-style: italic;
+      }
+      &__date {
+        overflow: auto;
+        clear: right;
+        display: flex;
+        opacity: 0.8;
+        text-transform: capitalize;
+        &__end {
+          margin-left: calc(vars.$gutter / 4);
+        }
+      }
+      &__content {
+        overflow-wrap: break-word;
+        &__info {
+          list-style-position: inside;
+          display:list-item;
+        }
+        &__info:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &__skills {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 570px;
+    width: 25%;
+    &__title {
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 25px;
+      padding-bottom: 15px;
+      font-weight: 700;
+      color: rgb(230, 5, 155);
+    }
+    &__skill {
+      &__title {
+        display: none;
+      }
+      &__content {
+        display:list-item;
+      }
+    }
+  }
+  &__language {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 53%;
+    left: 330px;
+    top: 1050px;
+    border-top: 2px solid #99005e;
+    &__title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: calc(vars.$h2 / 1.2);
+      letter-spacing: 3.2px;
+      color: rgb(230, 5, 155);
+      &__category {
+        padding: vars.$gutter 0 calc(vars.$gutter / 4);
+      }
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      &__header {
+        display: flex;
+        text-transform: capitalize;
+        &__name {
+          &__info {
+            font-weight: 600;
+            color: rgb(80, 79, 79);
+          }
+        }
+        &__level {
+          padding-left: calc(vars.$gutter / 4);
+        }
+      }
+    }
+  }
+  &__activity {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    color: vars.$text-color;
+    left: 60px;
+    top: 810px;
+    width: 25%;
+    &__title {
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 25px;
+      padding-bottom: 15px;
+      font-weight: 700;
+      padding-top: 15px;
+      border-top: 2px solid #99005e;
+      color: rgb(230, 5, 155);
+    }
+    &__header {
+    padding-bottom: vars.$gutter;
+      &__title {
+        opacity: 0.8;
+        text-transform: uppercase;
+        color: rgb(80, 79, 79);
+      }
+      &__date {
+        overflow: auto;
+        clear: right;
+        display: none;
+        opacity: 0.8;
+        text-transform: capitalize;
+        &__end {
+          margin-left: calc(vars.$gutter / 4);
+        }
+      }
+      &__content {
+        overflow-wrap: break-word;
+        &__info {
+          list-style-position: inside;
+          display:list-item;
+        }
+        &__info:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &__socialNetwork {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    color: vars.$text-color;
+    left: 60px;
+    top: 650px;
+    width: 25%;
+    &__category {
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 23px;
+      padding-bottom: 15px;
+      font-weight: 700;
+      padding-top: 15px;
+      border-top: 2px solid #99005e;
+      color: rgb(230, 5, 155);
+    }
+    &__header{
+    &__link{
+      color: rgb(80, 79, 79);
+    }
+  }
+  }
+}

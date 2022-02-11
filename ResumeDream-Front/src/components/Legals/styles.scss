@@ -1,0 +1,24 @@
+@use '../../styles/vars';
+
+.legals {
+  padding: 8 * vars.$gutter;
+
+  &__title {
+    text-align: center;
+    font-size: vars.$h1;
+    margin-bottom: 3 * vars.$gutter;
+  }
+
+  &__theme {
+    margin: vars.$gutter 0;
+    padding: 2 * vars.$gutter;
+
+    &__title {
+      font-size: vars.$h2;
+    }
+
+    &__subtitle {
+      font-size: vars.$tiny-title;
+    }
+  }
+}

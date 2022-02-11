@@ -1,0 +1,55 @@
+@use '../../styles/vars';
+
+.my-space {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  &__sidebar {
+      left: 0;
+      width:25%;
+      flex-wrap: wrap;
+
+      &__item {
+        padding: calc(vars.$gutter/2) vars.$gutter;
+        color: vars.$main-color;
+        cursor: pointer;
+      }
+    }
+}
+
+.welcome {
+  background-color: white;
+  width: 100%;
+  &__title, &__name {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  &__title {
+    font-size: vars.$h1;
+    padding: calc(vars.$gutter*5) 0 vars.$gutter 0;
+  }
+  &__name {
+    font-size: vars.$h2;
+    padding: vars.$gutter 0 calc(vars.$gutter*5) 0;
+  }
+}
+
+.my-profile {
+  width: 75%;
+  background-color: white;
+  padding-top: 0;
+  &__section {
+    padding-left: 32px;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .my-profile {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+@use '../../styles/vars';
+
+.sidebar {
+  &__item {
+    padding: calc(vars.$gutter/2) vars.$gutter;
+    color: vars.$main-color;
+    cursor: pointer;
+  }
+  &__dropdown {
+    flex-direction: column;
+  }
+}

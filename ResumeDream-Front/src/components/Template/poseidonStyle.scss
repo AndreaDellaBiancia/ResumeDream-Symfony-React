@@ -1,0 +1,407 @@
+@use '../../styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500;600;700;900&display=swap');
+
+//style sheet for poseidon template
+.template__page {
+  display: flex;
+  min-height: 70rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.template__page__cv {
+  width: 49.6rem;
+  height: 68rem;
+  flex-wrap: wrap;
+  position: relative;
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 500;
+  font-size: vars.$p;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-sizing: initial;
+  padding-bottom: 2rem;
+  background: #DDEAFF;
+
+
+  //personal data style rules
+  &__personalDatas {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #004660;
+
+    &__ {
+      margin-bottom: vars.$gutter;
+    }
+    //name size and position
+    &__firstName, &__lastName {
+      font-weight: 900;
+      text-transform: uppercase;
+      color: white;
+      background-color: #004660;
+      letter-spacing: 8px;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 40%;
+      &__info {
+        font-size: vars.$h1*2;
+      }
+    }
+    &__firstName {
+      padding-top: 96px;
+      padding-bottom: 27px;
+    }
+    &__lastName {
+      padding-bottom: 40px;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: calc(vars.$h2 / 1.2);
+      letter-spacing: 3.2px;
+
+      &__profil {
+        text-transform: uppercase;
+        position: absolute;
+        top: 21rem;
+        left: 2.5rem;
+        padding-top: vars.$gutter;
+        border-top: 3px solid #004660;
+        width: 30%;
+      }
+    }
+
+    // picture size and position
+    &__picture {
+      padding-left: 7%;
+      position: absolute;
+      top: 30%;
+
+      &__info {
+        height: 15rem;
+        width: 11rem;
+        object-fit: cover;
+      }
+    }
+    // contact information position
+    &__contact {
+      position: absolute;
+      top: 15rem;
+      left: 20rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+
+      &__phone_nb {
+        width: 50%;
+      }
+
+      &__email {
+        width: 50%;
+      }
+
+      &__address {
+        position: relative;
+        width: 50%;
+        display: flex;
+        &__city {
+          padding-left: calc(vars.$gutter/3)  ;
+        }
+      }
+
+      &__birth {
+        text-transform: capitalize;
+        width: 50%;
+      }
+
+      &__linkedin {
+        width: 50%;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      top: 25rem;
+      left: 2.5rem;
+      width: 30%
+    }
+  }
+
+  // experience style rules
+  &__experience {
+    position: absolute;
+    top: 21rem;
+    left: 20rem;
+    display: flex;
+    flex-direction: column;
+    width: 52%;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: calc(vars.$h2 / 1.2);
+      letter-spacing: 3.2px;
+
+      &__category {
+        border-top: 3px solid #004660;
+        padding: vars.$gutter 0 calc(vars.$gutter / 4);
+      }
+    }
+
+    &__header {
+      padding-top: vars.$gutter;
+
+      &__role {
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+
+      &__city {
+        float: left;
+        margin-right: 3.2px;
+      }
+
+      &__date {
+        overflow: auto;
+        clear: right;
+        display: flex;
+        text-transform: capitalize;
+
+        &__end {
+          margin-left: calc(vars.$gutter / 4);
+        }
+      }
+
+      &__company-name {
+        text-decoration: underline;
+      }
+
+      &__content {
+        overflow-wrap: break-word;
+
+        &__info {
+          list-style-position: inside;
+          display: list-item;
+        }
+
+        &__info:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  // education style rules
+  &__educations {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 20rem;
+    top: 42rem;
+    width: 55%;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: calc(vars.$h2 / 1.2);
+      letter-spacing: 3.2px;
+      padding-right: 1.5rem;
+
+      &__category {
+        border-top: 3px solid #004660;
+        padding: 1rem 0 .35rem;
+
+      }
+    }
+
+    &__education {
+      padding: 0.3rem;
+
+      &__certificate {
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+
+      &__school-name {
+        text-decoration: underline;
+      }
+
+      &__city {
+        float: left;
+        margin-right: 3.2px;
+      }
+
+      &__date {
+        overflow: auto;
+        clear: right;
+        display: flex;
+        text-transform: capitalize;
+
+        &__end {
+          margin-left: calc(vars.$gutter / 4);
+        }
+      }
+
+      &__content {
+        overflow-wrap: break-word;
+
+        &__info {
+          list-style-position: inside;
+          display: list-item;
+        }
+
+        &__info:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  // skills style rules
+  &__skills {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 31rem;
+    left: 2.5rem;
+    width: 30%;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: calc(vars.$h2 / 1.2);
+      letter-spacing: 3.2px;
+
+
+      &__category {
+        border-top: 3px solid #004660;
+        padding: vars.$gutter 0 calc(vars.$gutter / 4);
+      }
+    }
+
+    &__skill {
+      display: flex;
+      flex-direction: column;
+      margin-top: vars.$gutter;
+
+
+      &__title {
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+
+      &__content {
+        &__info {
+          list-style-position: inside;
+          display: list-item;
+        }
+      }
+    }
+  }
+
+  // language style rules
+  &__language {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 20rem;
+    top: 63rem;
+    width: 55%;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: calc(vars.$h2 / 1.2);
+      letter-spacing: 3.2px;
+
+      &__category {
+        border-top: 3px solid #004660;
+        padding: vars.$gutter 0 calc(vars.$gutter / 4);
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+
+      &__header {
+        display: flex;
+        text-transform: capitalize;
+
+        &__name {
+          &__info {
+            font-weight: 600;
+          }
+        }
+
+        &__level {
+          padding-left: calc(vars.$gutter / 4);
+        }
+      }
+    }
+  }
+
+  // activity style rules
+  &__activity {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 50rem;
+    left: 2.5rem;
+    width: 30%;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: calc(vars.$h2 / 1.2);
+      letter-spacing: 3.2px;
+
+      &__category {
+        border-top: 3px solid #004660;
+        padding: vars.$gutter 0 vars.$gutter;
+      }
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+
+      &__date {
+        text-transform: capitalize;
+      }
+
+      &__title {
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+
+      &__content {
+        &__info {
+          list-style-position: inside;
+          display: list-item;
+        }
+      }
+    }
+  }
+
+  // social network style rules, it's located just beneath the contact inforrmation
+  &__socialNetwork {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    top: 63rem;
+    left: 2.5rem;
+    width: 25%;
+    text-transform: capitalize;
+
+    &__category {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: calc(vars.$h2 / 1.2);
+      letter-spacing: 3.2px;
+      border-top: 3px solid #004660;
+      padding: vars.$gutter 0 vars.$gutter;
+    }
+  }
+}

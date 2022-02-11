@@ -1,0 +1,60 @@
+@use '../../styles/vars';
+
+.faq {
+  &__head {
+    padding: vars.$gutter;
+    background-color: #fff;
+    padding: 5 * vars.$gutter;
+
+    &__title {
+      font-size: vars.$h1;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    padding: 5 * vars.$gutter;
+
+    &__question {
+      padding: vars.$gutter;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      &__item {
+        padding: 2 * vars.$gutter;
+        border: solid 2px vars.$main-color;
+        border-radius: 0.5 * vars.$gutter;
+        min-width: 100%;
+  
+        &__head {
+          display: flex;
+          justify-content: space-between;
+  
+          &__title {
+            font-size: vars.$h2;
+            text-transform: uppercase;
+          }
+  
+          &__icon {
+            font-size: 3rem;
+            cursor: pointer;
+            transition: all 0.7s;
+            color: vars.$main-color;
+          }
+  
+          &__icon--open {
+            transform: rotateZ(45deg);
+            transition: all 0.7s;
+          }
+        }
+  
+        &__text {
+          margin-top: 2 * vars.$gutter;
+        }
+      }
+    }
+  }
+  
+}
